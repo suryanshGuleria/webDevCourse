@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tables</title>
+    <style>
+        table,tr,td,th{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<br>
+    <table>
+        <caption>A simple table</caption>
+         <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Marks</th>
+         </tr>
+         <tr>
+            <td>A</td>
+            <td>13</td>
+            <td>99</td>
+         </tr>
+         <tr>
+            <td>B</td>
+            <td>15</td>
+            <td>98</td>
+         </tr>
+         <tr>
+            <td>C</td>
+            <td>14</td>
+            <td>100</td>
+         </tr>
+         <tr>
+            <td>D</td>
+            <td>17</td>
+            <td>99</td>
+         </tr>
+    </table>
+    </br>
+    </br>
+    <table>
+        <caption>Menacing Table</caption>
+        <tr>
+            <td rowspan="2">State of health</td>
+            <td colspan="2">Fasting Value</td>
+            <td>After Eating</td>
+        </tr>
+        <tr>
+            <td>Minimum</td>
+            <td>Maximum</td>
+            <td>2 hours after eating</td>
+        </tr>
+        <tr>
+            <td>Healthy</td>
+            <td>70</td>
+            <td>100</td>
+            <td>Less than 140</td>
+        </tr>
+        <tr>
+            <td>Pre diabitic</td>
+            <td>101</td>
+            <td>126</td>
+            <td>140 to 200</td>
+        </tr>
+        <tr>
+            <td>Diabetes</td>
+            <td>More than 126</td>
+            <td>N/A</td>
+            <td>More than 200</td>
+        </tr>
+    </table>
+ </br>
+ </br>
+ <table>
+    <caption>Colgroup Practise</caption>
+    <colgroup>
+        <!-- <col span="3" style="background-color: Green;"> -->
+        <!-- <col span="1">
+        <col span="3" style="background-color:yellow"> -->
+        <col span="1">
+        <col span="1" style="background-color: red;">
+        <col span="1">
+        <col span="1" style="background-color: red;">
+    </colgroup>
+    <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+        <th>Col 3</th>
+        <th>Col 4</th>
+        <th>Col 5</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+</table>
+</br>
+</br>
+<table>  
+        <thead>  
+            <tr>  
+                <td colspan="2" style="color:green">Table Header </td>  
+            </tr>  
+        </thead>  
+        <tfoot>  
+            <tr>  
+                <td colspan="2" style="color:red">Table Footer </td>  
+            </tr>  
+        </tfoot>  
+        <tbody>  
+            <tr>  
+                <td style ="color :Orange">Body of the Table</td>  
+                <td>Cell 1 - part of tbody</td>  
+                <td>Cell 2 - part of tbody</td>  
+                <td>Cell 3 - part of tbody</td>  
+                <td>Cell 4 - part of tbody</td>  
+                <td>Cell 5 - part of tbody</td>  
+                <td>Cell 6 - part of tbody</td>  
+            </tr>  
+        </tbody>  
+    </table> 
+</body>
+</html>
