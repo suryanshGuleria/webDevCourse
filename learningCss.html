@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+    <style>
+        /* element selector */
+        p{
+            color:cadetblue;
+        }
+        /* class selector */
+        .small{
+            font-size: smaller;
+        }
+        .large{
+            font-size: larger;
+        }
+        /* id selector */
+        #button{
+            color:brown;
+        }
+        /* pseudoclass selector */
+        button:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>These paras are selected using element selector</h2>
+    <p>a generic paragraph</p>
+    <p>a generic paragraph</p>
+    <h2>These heading are selected and styled using class selector</h2>
+    <h1 class="small">Heading 1</h1>
+    <h2 class="small">Heading 2</h2>
+    <h3 class="small">Heading 3</h3>
+    <h4 class="large">Heading 4</h4>
+    <h5 class="large">Heading 5</h5>
+    <h6 class="large">Heading 6</h6>
+
+    <h2>This button is selected and modified using Id selector</h1>
+    <button id="button">Frankly</button>
+    
+    <h2>Pseudoclass Selectors</h2>
+    <button>Hover Please</button>
+</body>
+</html>
