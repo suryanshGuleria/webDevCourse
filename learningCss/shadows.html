@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Box shadows in CSS</title>
+    <style>
+        .text{
+            text-shadow: 5px 5px 5px red;
+        }
+        .box{
+            background-color: cyan;
+            height: 300px;
+            width: 300px;
+            border: 1px solid  black;
+            margin-top: 100px;
+            margin-left: 30px;
+            box-shadow: 15px 15px 15px brown,20px 20px 20px red;
+        }
+        .overflow{
+            margin-top: 100px;
+            border: 1px solid black;
+            max-height: 70px;
+            width:  400px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text">Text having Shadow effect</h1>
+    <div class="box">
+        A box having shadow effect
+    </div>
+    <div class="overflow">
+            This is to learn overflow and the concept of max min height.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa reprehenderit velit soluta maiores debitis accusamus obcaecati asperiores quasi impedit sit ad, explicabo culpa ex eveniet facilis! Vel velit voluptatem ad!
+            Possimus hic neque deleniti aspernatur qui labore dolore quibusdam obcaecati nesciunt id commodi natus laborum reiciendis sunt nobis mollitia placeat a ad quo inventore, eius voluptatibus vitae harum sed! Optio?
+    </div>
+</body>
+</html>
