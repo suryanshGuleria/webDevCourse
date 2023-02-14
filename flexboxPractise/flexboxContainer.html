@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Container Properties</title>
+</head>
+<style>
+    .container{
+        height: 400px;
+        border: 1px solid green;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap; 
+        /* flex-flow: row-reverse wrap; */
+        /* justify-content:flex-end; (main axis ke end me) justify works on main axis */
+        /* justify-content:center;(mai axis ke center pr) */
+        /* justify-content:space-around; (space in <between> the items is constant)*/
+        /* justify-content: space-evenly; (space to the right and left of each box is constant) */
+        /* justify-content: space-between; (even space only between the boxes) */
+       
+          justify-content: center;
+          align-items: center;
+
+        /* working on cross axis */
+        /* align-items: flex-start; */
+        /* align-items: center; */
+        /* align-items: stretch; (this is default value, it stretches content accros complete height of box(cross axis)) */
+        /* align-items: baseline; (arranges all the boxes in same line based on their content) */
+        /* gap: 20px; (generates gap only in between the boxes) (row wise and column wise gap is possible) */
+
+        /* For alignment on the basis of rows of boxes we use align-content*/
+        /* align-content: flex-start; Then we can use same attributes as discussed above. */
+
+    }   
+    .box{
+        border: 1px solid brown;
+        background-color: aqua;
+        width: 100px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+    </div>
+</body>
+</html>
