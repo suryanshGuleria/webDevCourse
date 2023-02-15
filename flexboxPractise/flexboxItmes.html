@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Itmes Properties</title>
+</head>
+<style>
+   .container{
+    display: flex;
+    border: 1px solid green;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+   }
+   .box{
+    border: 1px solid brown;
+    background-color: aqua;
+    /* width: 80px; (the diff. bw <flex-basis> and width is that in flex basis overflow is not hidden) */
+    flex-basis: 90px;  /* can also be given in percentages */
+    /* flex-grow: 1; */
+   }
+   #box2{
+    order: 1;
+   }
+   #box1{
+    order: 4;
+    flex-grow: 2;
+   }
+   #box3{
+    order: 4;
+    flex-shrink: 2;
+    /* align-self: flex-end; (this is used to align a flex item individually) */
+   }
+   #box4{
+    order: 4;
+    align-self: stretch;
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box" id="box2">box-2</div>
+        <div class="box" id="box3">box-3</div>
+        <div class="box" id="box4">box-4</div>
+    </div>
+</body>
+</html>
