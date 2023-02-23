@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Properties</title>
+    <style>
+        .container{
+            background-color: yellow;
+            border:2px solid black;
+            height: 600px;
+            width: 800px;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;    /* when using repeat justify content was not working. */
+            grid-template-rows: 200px 200px;
+            gap: 10px;
+
+            /* about content (overall items in a grid combined)*/
+            /* justify-content: space-evenly; (justify works on main axis)*/
+            /* align-content: space-evenly; (align works on cross axis) */
+
+            /* about items (grid items)(aligning with respect to the grid box/lines in which the element falls and also making box size equal to the content along the cross(align) and main(justify) axis)*/ 
+            /* justify-items: end; */
+            /* align-items: end; */
+            
+            /* or combo of both */
+
+            align-items: center;
+            justify-items: center;
+
+
+        }
+        .box{
+            background-color: cyan;
+            border:2px solid red;
+        }
+
+        /* properties for specific to grid items */
+        #box1{
+            justify-self: center;
+            align-self: center;
+
+            /* or */
+            
+            place-self: end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+        <div class="box">box-6</div>
+    </div>
+    <p>look at the comments in the code to develop further understanding.</p>
+</body>
+</html>
