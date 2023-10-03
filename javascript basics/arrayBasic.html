@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JS</title>
+  </head>
+  <body>
+    <h1>Dummy Heading</h1>
+    <p>Asli Kam to console me chl rha hai</p>
+
+    <script>
+      // <array> declaration
+      let arr = [1, 2, 3, 5];
+      console.log(arr);
+
+      //to check if element exist in an array (if element is primitive):
+      let number = [1, 2, 3, 4];
+      number.indexOf(2); //returns the index
+      number.includes(3); //returns true or false
+      number.indexOf(5, 2); //returns index of 5 if it exsists after 2nd index
+
+      //to check if an object exsists in an array:
+
+      let group = [
+        { roll: 1, name: "abhishek" },
+        { roll: 2, name: "bali" },
+        { roll: 3, name: "caleshi" },
+      ];
+
+      let check = group.find(function (arr) {
+        return group.roll === 3;
+      }); // returns object if it is found otherwise undefined
+
+      // this function can also be written as
+      let shortCheck = group.find((group) => group.roll === 3);
+
+      // To remove elements from an array
+      //end:
+      arr.pop();
+      //begining:
+      arr.shift();
+      //In between
+      arr.splice(2, 1); //first index then no. to be removed
+
+      //To empty an array
+      number = []; // this works but do not remove the actual numbers on registers or location
+
+      number.splice(0, number.length);
+
+      number.length = 0; // best practise
+
+      // combining and slicing array
+      let catcon = first.concat(second);
+
+      let spreadArray = [...first, ...second]; //combining using spread operator and it can also add other stuff in between
+      //for example = [...first, 'a' ,1,2,3, ...second];
+
+      //slicing:
+      let sli = numbers.slice(2, 6); //returns an array that is from the second index to <fifth index>
+
+      // Printing an array ( for of loop ) & ( forEach )
+      //For of:
+      let ary = [1, 2, 3, 4, 5];
+      for (let val of ary) {
+        console.log(val);
+      }
+
+      //forEach loop:
+      ary.forEach(function (value) {
+        console.log(value);
+      });
+
+      // forEach using arrow function
+      ary.forEach((value) => console.log(value));
+
+      //we have split and join method to break and join stuffs <sort> <reverse> <filter> numbers.filter(function(value){ return: });
+
+      // mapping of arrays using map funtion <maps each element of array to something else>
+
+      let numb = [1, 2, 3, 4, 5];
+
+      let mapped = numb.map((value) => value + "a");
+      console.log(mapped);
+
+      // mapping with objects and chaining
+      let number = [1, 2, -4, -6];
+      let item = number.filter((value) => value > 0);
+      let mapped = item.map((mapValue) => ({ value: mapValue }));
+      console.log(mapped);
+    </script>
+  </body>
+</html>

@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradients in CSS</title>
     <style>
-        .box{
-            height: 300px;
-            width: 300px;
-            background-image: linear-gradient(to bottom right,red, green);
-        }
-        .radial{
-            margin-top: 10px;
-            height: 500px;
-            width: 300px;
-            background-image: radial-gradient(circle,orange,white, green);
-        }
-        .conic{
-            margin-top: 10px;
-            height: 300px;
-            width: 300px;
-            background-image: conic-gradient(red, green ,blue);
-            border-radius: 50%;
-        }
+      /* Got to know about repeating gradients and also about how we can add stops in gradients (by adding precentages in front of the them
+        which servers as start and end point for the gradients) */
+      .box {
+        height: 300px;
+        width: 300px;
+        background-image: linear-gradient(to bottom right, red, green);
+      }
+      .radial {
+        margin-top: 10px;
+        height: 500px;
+        width: 300px;
+        background-image: radial-gradient(circle, orange, white, green);
+      }
+      .conic {
+        margin-top: 10px;
+        height: 300px;
+        width: 300px;
+        background-image: conic-gradient(red, green, blue);
+        border-radius: 50%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box">This is a div</div>
     <div class="radial">Radial gradient(circle)</div>
     <div class="conic">Conic gradient</div>
-</body>
+  </body>
 </html>
