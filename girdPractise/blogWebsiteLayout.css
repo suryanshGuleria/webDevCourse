@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.header-div{
+    display: flex;  
+    justify-content: space-between;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+
+.content-grid{  
+    flex: 1;
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.25rem;
+    column-gap: 0.625rem; 
+}
+
+/* working with grid itmes (mainly representation of indiviudal blog) */
+.grid-items{
+    border: 3px solid lightgrey;
+    padding: 1.25rem;
+}
+.category{
+    margin-bottom: 0.6rem;
+}
+.date   {
+    color: darkgrey;
+}
+.blog-content{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+

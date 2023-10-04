@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 2rem 2rem 2rem;
+      }
+      p {
+        text-align: justify;
+      }
+      .header-div {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+      }
+      .content-grid {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 2rem;
+      }
+      /* styling the right div (containing the BlogPosts) */
+      .date-and-author {
+        margin-bottom: 1rem;
+        color: darkgrey;
+      }
+      .subheading {
+        margin-top: 2rem;
+      }
+
+      /* styling the left div (containig all sidebar items) */
+      .about {
+        background-color: lightgrey;
+        padding: 1rem;
+      }
+      .about-content {
+        margin-top: 1rem;
+      }
+      .archives {
+        margin-top: 3rem;
+      }
+      .archive-links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+      }
+      .elsewhere {
+        margin-top: 3rem;
+      }
+      .elsewhere-links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main div container -->
+    <div class="container">
+      <!-- Header div Using flexbox-->
+      <div class="header-div">
+        <a href="sample.xyz">Subscribe</a>
+        <h1><u>Blog Post</u></h1>
+        <a href="search.com">Search</a>
+      </div>
+      <!-- content div using grid containing 2 grids 1 for actual content and another as a sidebar-->
+      <div class="content-grid">
+        <div class="reading-section">
+          <h1>Heading(BlogPost Name)</h1>
+          <p class="date-and-author">
+            Januray 14, 2023 by <a href="mark.com">Mark</a>
+          </p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum harum
+            consectetur fugit expedita quaerat mollitia, accusantium deserunt
+            nam provident in eveniet. Quaerat molestias, explicabo fugiat
+            recusandae accusamus a delectus earum odio aliquid. Laboriosam rerum
+            ea delectus nam sequi porro! Rem vel qui, facere blanditiis dolorem
+            nostrum harum delectus ipsum voluptates, possimus molestiae esse
+            odit ipsam voluptatibus aliquid, sed ducimus amet! Quos iste optio
+            aliquam aliquid nesciunt, atque nam accusantium laborum? Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Odio asperiores debitis
+            obcaecati. Ea cupiditate voluptate enim explicabo sit illo non.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+            tenetur temporibus veniam consectetur, dicta, veritatis illum
+            deserunt reprehenderit nobis impedit perspiciatis corporis provident
+            doloremque vitae beatae earum hic assumenda dolorum! Distinctio
+            sapiente iure beatae nam qui facere repellat veniam velit.
+          </p>
+          <h2 class="subheading">Subheading</h2>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum harum
+            consectetur fugit expedita quaerat mollitia, accusantium deserunt
+            nam provident in eveniet. Quaerat molestias, explicabo fugiat
+            recusandae accusamus a delectus earum odio aliquid. Laboriosam rerum
+            ea delectus nam sequi porro! Rem vel qui, facere blanditiis dolorem
+            nostrum harum delectus ipsum voluptates, possimus molestiae esse
+            odit ipsam voluptatibus aliquid, sed ducimus amet! Quos iste optio
+            aliquam aliquid nesciunt, atque nam accusantium laborum?
+          </p>
+          <h2 class="subheading">Subheading</h2>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum harum
+            consectetur fugit expedita quaerat mollitia, accusantium deserunt
+            nam provident in eveniet. Quaerat molestias, explicabo fugiat
+            recusandae accusamus a delectus earum odio aliquid. Laboriosam rerum
+            ea delectus nam sequi porro! Rem vel qui, facere blanditiis dolorem
+            nostrum harum delectus ipsum voluptates, possimus molestiae esse
+            odit ipsam voluptatibus aliquid, sed ducimus amet! Quos iste optio
+            aliquam aliquid nesciunt, atque nam accusantium laborum?
+          </p>
+        </div>
+        <div class="sidebar">
+          <div class="about">
+            <h3>About</h3>
+            <p class="about-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+              incidunt quae. Repellat totam molestias dicta optio deserunt sed!
+              Odio quo laborum repellendus, vero iusto nihil eligendi
+              repudiandae delectus consequatur autem!
+            </p>
+          </div>
+          <div class="archives">
+            <h3>Archives</h3>
+            <div class="archive-links">
+              <a href="sample.xyz">March 2014</a>
+              <a href="sample.xyz">Januray 2014</a>
+              <a href="sample.xyz">September 2014</a>
+              <a href="sample.xyz">Hocus 2014</a>
+              <a href="sample.xyz">Poucs 2014</a>
+              <a href="sample.xyz">March 2014</a>
+              <a href="sample.xyz">Januray 2014</a>
+              <a href="sample.xyz">September 2014</a>
+              <a href="sample.xyz">Hocus 2014</a>
+              <a href="sample.xyz">Poucs 2014</a>
+            </div>
+          </div>
+          <div class="elsewhere">
+            <h3>Elsewhere</h3>
+            <div class="elsewhere-links">
+              <a href="a.com">Github</a>
+              <a href="a.com">Facebook</a>
+              <a href="a.com">Linkedin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
