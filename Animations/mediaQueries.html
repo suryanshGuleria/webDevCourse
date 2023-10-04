@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Media Queries</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+      .content {
+        border: 2px solid black;
+        font-size: 2rem;
+      }
+      @media (max-width: 800px) and (min-width: 400px) {
+        /* To apply this setting width should be less than 800px and greater than 400px*/
+        html {
+          font-size: 10px;
+        }
+      }
+      @media (max-width: 400px) {
+        html {
+          font-size: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <p class="text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse vitae
+          quae architecto harum nobis repellendus minima, amet illum officiis
+          dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatum dolore dignissimos at placeat quos autem molestiae illo
+          expedita, cum exercitationem doloremque hic possimus laboriosam
+          labore, a nihil blanditiis deleniti enim aspernatur. Nulla magnam
+          commodi iusto sit! Mollitia, quo unde. Rem facere praesentium
+          quibusdam earum dolorem accusamus vel cupiditate, possimus dolores.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          deleniti voluptatem porro autem cupiditate rem aliquid, et doloremque
+          aliquam optio aperiam enim quaerat repudiandae dolore ratione fuga
+          consequuntur amet quia veniam soluta quisquam architecto? Deleniti rem
+          qui, officia repellendus illum maiores, possimus molestias repellat ut
+          commodi non quia cum recusandae.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
