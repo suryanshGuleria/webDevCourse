@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Functions and Variables</title>
+    <style>
+      * {
+        --hot-pink: #ff69b4;
+        --just-purple: #9146ff;
+      }
+      .container {
+        background-color: lightblue;
+        color: var(--just-purple);
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .box {
+        background-color: lightgoldenrodyellow;
+        color: var(--hot-pink);
+        border: 1px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>I am the container</p>
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+      <div class="box">Box4</div>
+      <div class="box">Box5</div>
+    </div>
+  </body>
+</html>
