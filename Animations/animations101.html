@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+  </head>
+  <style>
+    html {
+      font-size: 16px;
+    }
+    @keyframes slideFromLeft {
+      from {
+        transform: translateX(-300px);
+      }
+
+      to {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes slideFromRight {
+      from {
+        transform: translateX(300px);
+      }
+
+      to {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      30%,
+      60%,
+      100% {
+        transform: translateY(0);
+      }
+      20% {
+        transform: translateY(-50px) scale(2);
+      }
+      45% {
+        transform: translateY(-25px) scale(2);
+      }
+      75% {
+        transform: translateY(-5px) scale(2);
+      }
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text1 {
+      font-size: 3rem;
+      animation: slideFromLeft 3s ease-in;
+    }
+    .text2 {
+      font-size: 2rem;
+      animation: slideFromRight 3s ease-in;
+    }
+    .text3 {
+      font-size: 1rem;
+      animation: bounce 3s ease;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p class="text1">Text-1</p>
+        <p class="text2">Text-2</p>
+        <p class="text3">Text-3</p>
+      </div>
+    </div>
+  </body>
+</html>

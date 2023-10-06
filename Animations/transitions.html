@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      height: 800px;
+      width: 800px;
+      background-color: #dd8e58;
+      border: 2px solid #2b2129;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 300px;
+      width: 300px;
+      background-color: #708a81;
+      border: 2px solid #2b2129;
+      transition: all 3s ease-in-out 0.5s;
+    }
+
+    .text-after {
+      transform: rotate(180deg);
+    }
+    .box:hover {
+      transform: rotate(180deg) scale(2) translate(-100px);
+      background-color: aquamarine;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p class="text-before">M just a litte bit caught in the middle</p>
+        <p class="text-after">ooo just got out.... thanks man !</p>
+      </div>
+    </div>
+  </body>
+</html>
