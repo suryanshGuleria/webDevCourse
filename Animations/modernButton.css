@@ -32,7 +32,7 @@ html{
     right: 0;
     transform: scaleX(0);
     transform-origin: left;
-    transition:all, 1s;
+    transition:all, 0.8s;
 
 }
 .button:hover{
