@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="wrapper w-[100vw] h-[100vh] flex flex-col justify-center items-center gap-10 bg-[#344151]"
+    >
+      <div class="text-[#0398d4] font-medium text-[20px]">
+        Increment and Decrement
+      </div>
+
+      <div
+        class="w-[14%] bg-white flex text-[25px] text-[#344151] rounded-sm gap-12 p-3 px-5"
+      >
+        <button class="border-r-2 border-[#bfbfbf] pr-5" onclick="decrement()">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <div id="counter" class="font-bold">0</div>
+        <button class="border-l-2 border-[#bfbfbf] pl-5" onclick="increment()">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/8a21b66f64.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
