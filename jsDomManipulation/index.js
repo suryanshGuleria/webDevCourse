@@ -172,22 +172,36 @@
 // FETCH API TO MAKE A POST CALL TO SERVER
 
 
-async function postCall(){
-    let option = {
-        method: 'POST',
-        body: JSON.stringify({
-          title: 'foo',
-          body: 'bar',
-          userId: 1,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        }
-      };
+// async function postCall(){
+//     let option = {
+//         method: 'POST',
+//         body: JSON.stringify({
+//           title: 'foo',
+//           body: 'bar',
+//           userId: 1,
+//         }),
+//         headers: {
+//           'Content-type': 'application/json; charset=UTF-8',
+//         }
+//       };
 
-    let callResponse = await fetch('https://jsonplaceholder.typicode.com/posts',option);
-    let toLog = await callResponse.json();
-    console.log(toLog);
-}
+//     let callResponse = await fetch('https://jsonplaceholder.typicode.com/posts',option);
+//     let toLog = await callResponse.json();
+//     console.log(toLog);
+// }
 
-postCall();
+// postCall();
+
+
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+console.log(fetchPromise);
+
+fetchPromise.then((response) => {
+  console.log(`Received response: ${response.status}`);
+});
+
+console.log("Started request…");
+
