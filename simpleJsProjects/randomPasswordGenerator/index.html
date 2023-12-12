@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind PlayGround</title>
+    <title>Password Generator</title>
     <!-- <link rel="stylesheet" href="main.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,8 +25,8 @@
           data-passwordDispaly
         />
 
-        <button data-copy>
-          <span data-copyMsg></span>
+        <button class="copyBtn" data-copy>
+          <span class="tooltip" data-copyMsg></span>
           <img src="assets/copy.svg" alt="copy" width="23" height="23" />
         </button>
       </div>
@@ -49,19 +49,19 @@
         />
 
         <!-- checkboxes -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes Uppercase letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowercase letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes Numbers</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes Symbols</label>
         </div>
@@ -69,8 +69,8 @@
         <!-- strength section -->
 
         <div class="strength-container">
-          <p>strength</p>
-          <div data-indicator></div>
+          <p>Strength</p>
+          <div class="indicator" data-indicator></div>
         </div>
 
         <!-- generate password -->

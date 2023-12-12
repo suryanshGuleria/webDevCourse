@@ -21,17 +21,22 @@ let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
 // set strengthCircle color to grey
+setIndicator("#ccc"," 0 0 20px #ccc");
 
 
 //set passwordLength (used to reflect password length screen in response to slider slide)
 function handleSlider(){
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ((passwordLength - min)*100/(max-min)) + "% 100%"
 }
 
-function setIndicator(color){
+function setIndicator(color,shadow){
     indicator.style.backgroundColor = color;
-    //shadow
+    indicator.style.boxShadow = shadow;
+    //shadow    
 }
 
 
@@ -72,15 +77,15 @@ function calcStrength() {
     if (symbolsCheck.checked) hasSym = true;
   
     if (hasUpper && hasLower && (hasNum || hasSym) && passwordLength >= 8) {
-      setIndicator("#0f0");
+      setIndicator("#0f0","0 0 20px #0f0" );
     } else if (
       (hasLower || hasUpper) &&
       (hasNum || hasSym) &&
       passwordLength >= 6
     ) {
-      setIndicator("#ff0");
+        setIndicator("#ff0","0 0 20px #ff0");
     } else {
-      setIndicator("#f00");
+        setIndicator("#f00","0 0 20px #f00");
     }
 }
 
