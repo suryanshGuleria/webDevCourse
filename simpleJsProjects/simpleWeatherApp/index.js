@@ -23,7 +23,7 @@ function switchTab(clickedTab){
     }
 
     if(!searchForm.classList.contains("active")){
-       //this means searchForm must be displayed and everything else must be hidden
+       //this means searchForm is not visible and must be displayed and everything else must be hidden
       userInfoContainer.classList.remove("active");
       grantAccessContainer.classList.remove("active");
       searchForm.classList.add("active");
@@ -106,7 +106,7 @@ function renderWeatherInfo(weatherInfo){
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-    temp.innerText = weatherInfo?.main?.temp;
+    temp.innerText = `${weatherInfo?.main?.temp}°C`;
     windspeed.innertext = weatherInfo?.wind?.speed;
     humidity.innertext = weatherInfo?.main?.humidity;
     cloudiness.innerText = weatherInfo?.clouds?.all;
