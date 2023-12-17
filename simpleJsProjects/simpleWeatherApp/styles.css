@@ -49,10 +49,10 @@ h1 {
 }
 
 .weather-container{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
     margin-block:4rem;
 }
 
@@ -120,6 +120,7 @@ h1 {
 /* Weather Display UI styling */
 
 .user-info-container{
+    
     display:none;
 }
 
@@ -134,7 +135,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.user-info-container p{
+.user-info-container > p{
     font-size:1.5rem;
     font-weight:200;
 }
@@ -157,4 +158,106 @@ object-fit: contain;
 .user-info-container p[data-temp] {
     font-size:2.75rem;
     font-weight:700;
+}
+
+.parameter-container{
+    width:90%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    width:30%;
+    max-width:200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+    transition: transform 200ms ease-in; 
+}
+
+.parameter:hover{
+    transform: scale(1.05);
+}
+
+.parameter img{
+    width:55px;
+    height:55px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    
+
+}
+
+.parameter p:last-of-type{
+    font-size: 1.35rem;
+    
+}
+
+/* styling the Search field */
+.form-container{
+    display: none;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px; 
+    margin-bottom: 3rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: translateY(5px);
+}
+
+.form-container .btn:hover{
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Styling Not found */
+
+.notFound{
+    display: none;
+}
+
+.notFound.active{
+    display: flex; 
 }

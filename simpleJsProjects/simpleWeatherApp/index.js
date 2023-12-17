@@ -6,6 +6,7 @@ const grantAccessContainer = document.querySelector(".grant-location-container")
 const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
+const notFoundContainer = document.querySelector(".notFound");
 
 //initially variables need????
 
@@ -31,6 +32,7 @@ function switchTab(clickedTab){
     else{
         //this means searchForm is already active and visible so hide it and make weather tab visible
        searchForm.classList.remove("active");
+       notFoundContainer.classList.remove("active");
        userInfoContainer.classList.remove("active"); //removed weather of searched city
        
        getfromSessionStorage();
@@ -107,9 +109,9 @@ function renderWeatherInfo(weatherInfo){
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
     temp.innerText = `${weatherInfo?.main?.temp}°C`;
-    windspeed.innertext = weatherInfo?.wind?.speed;
-    humidity.innertext = weatherInfo?.main?.humidity;
-    cloudiness.innerText = weatherInfo?.clouds?.all;
+    windspeed.innerText =  `${weatherInfo?.wind?.speed}m/s`;
+    humidity.innerText =  `${weatherInfo?.main?.humidity}%`;
+    cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
 }
 
 // this section is for working with location(fetching and setting/storing)
@@ -156,13 +158,22 @@ async function fetchSearchWeatherInfo(city){
 
     try{
          const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
-         const data = await response.json();
-
-         loadingScreen.classList.remove("active");
-         userInfoContainer.classList.add("active");
-         renderWeatherInfo(data);
+         if(!response.ok){
+             loadingScreen.classList.remove("active");
+             userInfoContainer.classList.remove("active");
+             notFoundContainer.classList.add("active");
+         }
+         else{
+            const data = await response.json();
+            notFoundContainer.classList.remove("active");
+            loadingScreen.classList.remove("active");
+            userInfoContainer.classList.add("active");
+            renderWeatherInfo(data);
+         } 
     }
     catch(err){
-        // handle error
+        console.log("reached here");
+        userInfoContainer.classList.remove("active");
+        
     }
 }
