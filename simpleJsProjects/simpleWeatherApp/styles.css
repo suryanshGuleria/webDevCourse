@@ -128,6 +128,7 @@ h1 {
     display: flex;
 }
 
+
 .name{
     display: flex;
     align-items: center;
@@ -169,6 +170,12 @@ object-fit: contain;
     margin-top: 2rem;
 }
 
+@media (max-width: 740px) {
+    .parameter-container{
+        flex-direction: column;
+    }
+}
+
 .parameter{
     width:30%;
     max-width:200px;
@@ -181,6 +188,12 @@ object-fit: contain;
     /* justify-content: space-between; */
     align-items: center;
     transition: transform 200ms ease-in; 
+}
+
+@media (max-width: 740px) {
+    .parameter{
+        min-width: 175px;
+    }
 }
 
 .parameter:hover{
