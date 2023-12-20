@@ -12,6 +12,12 @@ const twitter = document.querySelector("[twitter]");
 const locationInfo = document.querySelector("[location]");
 const blogLink = document.querySelector("[blogLink]");
 const companyName = document.querySelector("[companyName]");
+const colorModeButton = document.querySelector("[colorModeButton]");
+
+// Default Action
+
+let defaultUsername = "suryanshGuleria";
+fetchUserInfo(defaultUsername);
 
 // To work on search form and extract text from search field.
 
@@ -81,7 +87,7 @@ function renderData(userInfo){
         companyName.innerText = `Not Available`;
     }
     else{
-        companyName.innerText = userInfo.compnay;
+        companyName.innerText = userInfo.company;
     }   
 }
 
@@ -103,4 +109,15 @@ function formatDate(dateString){
 
     let result = `Joined ${day[0]+day[1]+" " + month + " " + year}`;
     return result;
+}
+
+
+// Related to dark mode.
+
+colorModeButton.addEventListener("click", ()=>{
+    changeColorMode();
+})
+
+function changeColorMode(){
+    
 }

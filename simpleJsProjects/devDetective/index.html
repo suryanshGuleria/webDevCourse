@@ -13,55 +13,65 @@
         <div class="header">
           <h1>DevDetective</h1>
           <div theme>
-            <p></p>
-            <i class="fa-regular fa-sun"></i>
-            <i class="fa-solid fa-moon"></i>
+            <button class="theme-switch-button" colorModeButton>
+              <p colorModeName>LIGHT</p>
+              <i class="fa-regular fa-sun"></i>
+              <i class="fa-solid fa-moon"></i>
+            </button>
           </div>
         </div>
 
         <!-- Input field Section -->
         <form searchForm>
-          <input
-            data-searchInput
-            type="text"
-            placeholder="Enter a Github username..."
-            value="suryanshGuleria"
-          />
-          <button type="submit">Search</button>
+          <div class="form-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              class="inputStyle"
+              data-searchInput
+              type="text"
+              placeholder="Enter a Github username..."
+            />
+            <button class="submit-button" type="submit">Search</button>
+          </div>
         </form>
 
         <!-- Profile Display Section -->
         <div class="profileDisplay">
           <!-- left side img -->
-          <div class="profileSectionLeft">
-            <img profileImage src="" alt="Profile Image" />
+          <div class="profile-section-left">
+            <img
+              class="profile-image"
+              profileImage
+              src=""
+              alt="Profile Image"
+            />
           </div>
           <!-- right side complete info -->
-          <div class="profileSectionRight">
+          <div class="profile-section-right">
             <!-- name and join date -->
-            <div>
-              <h3 username></h3>
+            <div class="name-joinDate">
+              <h2 username></h2>
               <p joinDate></p>
             </div>
 
             <!-- profile link and bio -->
             <div><a profileLink href=""></a></div>
-            <div bio></div>
+            <div class="bio-section" bio></div>
 
             <!-- Followers, Following and Repos -->
-            <div ffrDiv>
+            <div class="followers-following-repos" ffrDiv>
               <!-- Card 1 -->
-              <div repos>
+              <div class="card" repos>
                 <p>Repos</p>
                 <p reposNum></p>
               </div>
               <!-- Card 2 -->
-              <div followers>
+              <div class="card" followers>
                 <p>Followers</p>
                 <p followersNum></p>
               </div>
               <!-- Card 3 -->
-              <div following>
+              <div class="card" following>
                 <p>Following</p>
                 <p followingNum></p>
               </div>
@@ -69,28 +79,24 @@
 
             <!-- Address, Bloglink, Twitter & Company-->
 
-            <div class="aboutSection">
+            <div class="about-section">
               <!-- location and twitter -->
-              <div class="locTwit">
-                <div class="aboutCard location">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <p location></p>
-                </div>
-                <div class="aboutCard twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                  <p twitter></p>
-                </div>
+              <div class="aboutCard location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p location></p>
+              </div>
+              <div class="aboutCard twitter">
+                <i class="fa-brands fa-twitter"></i>
+                <p twitter></p>
               </div>
               <!-- Blog Link and Company Name -->
-              <div class="bioComp">
-                <div class="aboutCard blogLink">
-                  <i class="fa-solid fa-link"></i>
-                  <p blogLink></p>
-                </div>
-                <div class="aboutCard compnayName">
-                  <i class="fa-solid fa-building"></i>
-                  <p companyName></p>
-                </div>
+              <div class="aboutCard blogLink">
+                <i class="fa-solid fa-link"></i>
+                <p blogLink></p>
+              </div>
+              <div class="aboutCard compnayName">
+                <i class="fa-solid fa-building"></i>
+                <p companyName></p>
               </div>
             </div>
           </div>

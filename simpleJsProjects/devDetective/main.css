@@ -1,0 +1,204 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* colors for dark mode */
+    --colorMainBg: #1B4242;
+    --colorSecBg: #5C8374;
+    --textColorBright: white;
+    --textColorDark: #EEE7DA;
+    --submitButtonClr: #304D30;
+
+    /* colors for light mode */
+    --colorMainBgLight: #F2F1EB;
+    --colorSecBgLight: white;
+    --textColorBrightLight: black;
+    --textColorDarkLight: #EEE7DA;
+    --submitButtonClrLight: #88AB8E;
+
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--colorMainBg);
+    /* border: 3px solid white; */
+}
+.wrapper.light{
+    background-color: var(--colorMainBgLight);
+}
+
+.container{
+   width: 55%;
+   margin: 0 auto;
+   padding: 40px;
+   /* border: 3px solid white; */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 3px solid white; */
+}
+
+.header > h1{
+    color: var(--textColorBright);
+    margin-bottom: 20px;
+}
+.header > h1.light{
+    color: var(--textColorBrightLight);
+}
+
+.theme-switch-button{
+    all: unset;
+    background-color: transparent;
+    color: var(--textColorBright);
+    display: flex;
+    cursor: pointer;
+}
+.theme-switch-button.light{
+    color: var(--textColorBrightLight);
+
+}
+
+.theme-switch-button > p{
+    margin-right: 15px;
+}
+
+.form-container{
+    position: relative;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    font-size: 20px;
+    z-index: 10;
+    top: 18px;
+    left: 18px;
+  
+}
+.inputStyle{
+    all: unset;
+    height: 60px;
+    width: 100%;
+    background-color: var(--colorSecBg);
+    border-radius: 15px;
+    color: var(--textColorBright);
+}
+.inputStyle.light{
+    background-color: var(--colorSecBgLight);
+
+}
+
+.inputStyle::placeholder{
+    color: var(--textColorDark);
+    padding-left: 50px;
+    font-size: 1.25rem;
+}
+.inputStyle::placeholder.light{
+    color: var(--textColorDarkLight);
+}
+
+.submit-button{
+    all: unset;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--submitButtonClr);
+    /* padding: 10px 10px; */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--textColorDark);
+    cursor: pointer;
+}
+.submit-button.Light{
+    background-color: var(--submitButtonClrLight);
+}
+
+/* Profile display section */
+
+.profileDisplay{
+    display: flex;
+    margin-top: 23px;
+    background-color: var(--colorSecBg);
+    padding: 4%;
+    border-radius: 10px;
+}
+.profileDisplay.light{
+    background-color: var(--colorSecBgLight);
+}
+
+.profile-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.profile-section-right{
+    margin-left: 40px;
+    color: var(--textColorDark);
+    width: 80%;
+    
+}
+.profile-section-right.light{
+    color: var(--textColorDarkLight);
+}
+
+.name-joinDate{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.bio-section{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.followers-following-repos{
+    display: flex;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: var(--colorMainBg);
+    color: var(--textColorBright);
+    margin-bottom: 35px;
+}
+.followers-following-repos.light{
+    background-color: var(--colorMainBgLight);
+    color: var(--textColorBrightLight);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 100px;
+}
+
+.card > p:nth-child(1){
+    font-size: 12px;
+    font-weight: lighter;
+}
+    
+
+.card > p:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+}
+
+.aboutCard{
+    display: flex;
+    gap: 14px;
+    font-size: 18px;
+}
