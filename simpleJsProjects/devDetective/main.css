@@ -16,7 +16,7 @@
     --colorMainBgLight: #F2F1EB;
     --colorSecBgLight: white;
     --textColorBrightLight: black;
-    --textColorDarkLight: #EEE7DA;
+    --textColorDarkLight: black;
     --submitButtonClrLight: #88AB8E;
 
 }
@@ -100,7 +100,8 @@
     font-size: 1.25rem;
 }
 .inputStyle::placeholder.light{
-    color: var(--textColorDarkLight);
+    /* color: var(--textColorBrightLight); */
+    color: red;
 }
 
 .submit-button{
@@ -115,8 +116,9 @@
     color: var(--textColorDark);
     cursor: pointer;
 }
-.submit-button.Light{
+.submit-button.light{
     background-color: var(--submitButtonClrLight);
+    color: var(--textColorDarkLight);
 }
 
 /* Profile display section */

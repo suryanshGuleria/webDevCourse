@@ -114,10 +114,60 @@ function formatDate(dateString){
 
 // Related to dark mode.
 
+const colorModeIcon = document.querySelector("[colorModeIcon]");
+const colorModeName = document.querySelector("[colorModeName]");
+const wrapper = document.querySelector(".wrapper");
+const mainHeading = document.querySelector(".header > h1");
+const themeSwitchButton = document.querySelector(".theme-switch-button");
+const inputStyle = document.querySelector(".inputStyle");
+// const inputStylePlaceholder = document.querySelector(".inputStyle::placeholder");
+// console.log(inputStylePlaceholder.innerHTML)
+const submitButton = document.querySelector(".submit-button");
+const profileDisplay = document.querySelector(".profileDisplay");
+const profileSectionRight = document.querySelector(".profile-section-right");
+const ffrSection = document.querySelector(".followers-following-repos");
+
+
+
 colorModeButton.addEventListener("click", ()=>{
     changeColorMode();
 })
 
 function changeColorMode(){
-    
+    if(colorModeName.innerText === "LIGHT"){
+       colorModeName.innerText = "DARK";
+       colorModeIcon.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+       renderLightColorMode();
+    }
+    else{
+       colorModeName.innerText = "LIGHT";
+       colorModeIcon.innerHTML = `<i class="fa-regular fa-sun"></i>`;
+       renderDarkColorMode();
+    }
+}
+
+function renderLightColorMode(){
+    wrapper.classList.add("light");
+    mainHeading.classList.add("light");
+    themeSwitchButton.classList.add("light");
+    inputStyle.classList.add("light");
+    // inputStylePlaceholder.classList.add("light");
+    submitButton.classList.add("light");
+    profileDisplay.classList.add("light");
+    profileSectionRight.classList.add("light");
+    ffrSection.classList.add("light");
+
+
+}
+
+function renderDarkColorMode(){
+    wrapper.classList.remove("light");
+    mainHeading.classList.remove("light");
+    themeSwitchButton.classList.remove("light");
+    inputStyle.classList.remove("light");
+    // inputStylePlaceholder.classList.remove("light");
+    submitButton.classList.remove("light");
+    profileDisplay.classList.remove("light");
+    profileSectionRight.classList.remove("light");
+    ffrSection.classList.remove("light");
 }
