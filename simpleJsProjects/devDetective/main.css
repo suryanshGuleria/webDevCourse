@@ -17,8 +17,10 @@
     --colorSecBgLight: white;
     --textColorBrightLight: black;
     --textColorDarkLight: black;
-    --submitButtonClrLight: #88AB8E;
+    --submitButtonClrLight: #E3F2C1;
 
+    /* color to be changed using js, basically another approach  */
+    --placeholderColor: #EEE7DA;
 }
 
 .wrapper{
@@ -71,59 +73,67 @@
 
 .form-container{
     position: relative;
-}
-
-.fa-magnifying-glass{
-    position: absolute;
-    font-size: 20px;
-    z-index: 10;
-    top: 18px;
-    left: 18px;
-  
-}
-.inputStyle{
-    all: unset;
     height: 60px;
-    width: 100%;
+    display: flex;
+    /* justify-content: baseline; */
+    align-items: center;
     background-color: var(--colorSecBg);
     border-radius: 15px;
     color: var(--textColorBright);
 }
-.inputStyle.light{
+.form-container.light{
     background-color: var(--colorSecBgLight);
-
+    color: var(--textColorBrightLight);
 }
 
-.inputStyle::placeholder{
-    color: var(--textColorDark);
-    padding-left: 50px;
+.fa-magnifying-glass{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.inputStyle{
+    all: unset;
+    width: 100%;
+    height: 30px;
     font-size: 1.25rem;
+    /* margin-top: 8px; */
 }
-.inputStyle::placeholder.light{
-    /* color: var(--textColorBrightLight); */
-    color: red;
+
+
+.inputStyle::placeholder{  
+    color: var(--placeholderColor);
+    /* padding-left: 50px; */
+    font-size: 1.2rem; 
 }
 
 .submit-button{
     all: unset;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    /* position: absolute; */
+    /* top: 10px;
+    right: 10px; */
     background-color: var(--submitButtonClr);
+    margin-right: 10px;
     /* padding: 10px 10px; */
     padding: 10px 20px;
     border-radius: 5px;
     color: var(--textColorDark);
     cursor: pointer;
+    font-size: 18px;
 }
 .submit-button.light{
     background-color: var(--submitButtonClrLight);
     color: var(--textColorDarkLight);
+    font-size: 15px;
+}
+
+.submit-button > p{
+    opacity: 0.8;
 }
 
 /* Profile display section */
 
 .profileDisplay{
+    width: auto;
     display: flex;
     margin-top: 23px;
     background-color: var(--colorSecBg);
@@ -143,7 +153,7 @@
 .profile-section-right{
     margin-left: 40px;
     color: var(--textColorDark);
-    width: 80%;
+    /* width: 80%; */
     
 }
 .profile-section-right.light{

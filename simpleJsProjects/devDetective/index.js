@@ -1,3 +1,4 @@
+const root = document.documentElement.style;
 const searchForm = document.querySelector("[searchForm]");
 const searchInput = document.querySelector("[data-searchInput]");
 const profileImage = document.querySelector("[profileImage]")
@@ -114,19 +115,19 @@ function formatDate(dateString){
 
 // Related to dark mode.
 
+let darkMode = true;
 const colorModeIcon = document.querySelector("[colorModeIcon]");
 const colorModeName = document.querySelector("[colorModeName]");
 const wrapper = document.querySelector(".wrapper");
 const mainHeading = document.querySelector(".header > h1");
 const themeSwitchButton = document.querySelector(".theme-switch-button");
-const inputStyle = document.querySelector(".inputStyle");
-// const inputStylePlaceholder = document.querySelector(".inputStyle::placeholder");
-// console.log(inputStylePlaceholder.innerHTML)
+const formContainer = document.querySelector(".form-container");
+// const formContainerPlaceholder = document.querySelector(".formContainer::placeholder");
+// console.log(formContainerPlaceholder.innerHTML)
 const submitButton = document.querySelector(".submit-button");
 const profileDisplay = document.querySelector(".profileDisplay");
 const profileSectionRight = document.querySelector(".profile-section-right");
 const ffrSection = document.querySelector(".followers-following-repos");
-
 
 
 colorModeButton.addEventListener("click", ()=>{
@@ -147,27 +148,38 @@ function changeColorMode(){
 }
 
 function renderLightColorMode(){
+    darkMode = false;
+    changeColorVariable(darkMode);
     wrapper.classList.add("light");
     mainHeading.classList.add("light");
     themeSwitchButton.classList.add("light");
-    inputStyle.classList.add("light");
-    // inputStylePlaceholder.classList.add("light");
+    formContainer.classList.add("light");
+    // formContainerPlaceholder.classList.add("light");
     submitButton.classList.add("light");
     profileDisplay.classList.add("light");
     profileSectionRight.classList.add("light");
     ffrSection.classList.add("light");
-
-
 }
 
 function renderDarkColorMode(){
+    darkMode = true;
+    changeColorVariable(darkMode);
     wrapper.classList.remove("light");
     mainHeading.classList.remove("light");
     themeSwitchButton.classList.remove("light");
-    inputStyle.classList.remove("light");
-    // inputStylePlaceholder.classList.remove("light");
+    formContainer.classList.remove("light");
+    // formContainerPlaceholder.classList.remove("light");
     submitButton.classList.remove("light");
     profileDisplay.classList.remove("light");
     profileSectionRight.classList.remove("light");
     ffrSection.classList.remove("light");
+}
+
+function changeColorVariable(darkMode){
+    if(!darkMode){
+      root.setProperty("--placeholderColor", "black");
+    }
+    else{
+      root.setProperty("--placeholderColor", "#EEE7DA");
+    }
 }
