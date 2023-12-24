@@ -1,4 +1,4 @@
-const root = document.documentElement.style;
+const root = document.documentElement.style; //selecting the root element that is html
 const searchForm = document.querySelector("[searchForm]");
 const searchInput = document.querySelector("[data-searchInput]");
 const profileImage = document.querySelector("[profileImage]")
