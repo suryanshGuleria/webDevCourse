@@ -1,0 +1,9 @@
+.blue{
+    height: 100px;
+    width: 100px;
+    border: 2px solid blue;
+  }
+.red{
+    background-color: red;
+    display: none;
+  }
