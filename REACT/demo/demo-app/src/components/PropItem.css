@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+p{
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    margin-bottom: 0px;
+    padding: 10px;
+}
