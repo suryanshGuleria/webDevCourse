@@ -1,42 +1,33 @@
-import React, {useState, useEffect} from "react";
-
+import React, {useState, useEffect} from "react"
+import {apiUrl, filterData} from "./data"
+import {toast} from "react-toastify"
+import Navbar from "./components/Navbar"
+import Filter from "./components/Filter"
+import Cards from "./components/Cards"
 
 const App = () => {
-  const [text, setText] = useState("");
-  const [name, setName] = useState("");
-
   
-  // called on every rerender
-  // useEffect(()=>{
-  //     console.log("A repaint occured !")
-  // });
-  
-  // called only once after first render
-  // useEffect(()=>{
-  //   console.log("A repaint occured !")
-  // },[]);
+  const [courses, setCourses] = useState('')
 
-  // renders whenever dependency changes
-  // useEffect(()=>{
-  //   console.log("repaint ! repaint ! repaint !");
-  // },[name]);
-
-  useEffect(()=>{
-    console.log("added");
-
-    return ()=>{
-      console.log("listener removed")
+  useEffect( ()=> {
+    const fetchData = async() =>{
+      try{
+           const res = await fetch(apiUrl);
+           const output = await res.json();
+          //saving data into a variable
+          setCourses(output.data);
+      }
+      catch(error){
+          toast.error()
+      }
     }
+    fetchData();
+  },[])
 
-  },[text]);
-  
-
-  function inputHandler(event){
-  setText(event.target.value);
-  }
-
-  return <div className="border">
-    <input className="letsgo" type="text" onChange={(event)=>{inputHandler(event)}} />
+  return <div>
+        <Navbar></Navbar>
+        <Filter filterData={filterData}></Filter>
+        <Cards courses={courses}></Cards>
   </div>;
 };
 
