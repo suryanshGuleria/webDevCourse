@@ -9,14 +9,16 @@ function Card(props) {
   function clickHandler() {
     if (likedCourses.includes(course.id)) {
       //already liked
-      setLikedCourses((prev) => prev.filter((cid) => cid !== course.id));
+      setLikedCourses((prevLiked) =>
+        prevLiked.filter((cid) => cid !== course.id)
+      );
       toast.warning("Liked Removed");
     } else {
       //not liked
       if (likedCourses.length === 0) {
         setLikedCourses([course.id]);
       } else {
-        setLikedCourses((prev) => [...prev, course.id]);
+        setLikedCourses((prevLiked) => [...prevLiked, course.id]);
       }
       toast.success("Liked Successfully");
     }
