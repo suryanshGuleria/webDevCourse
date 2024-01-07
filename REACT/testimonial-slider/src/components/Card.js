@@ -11,7 +11,10 @@ export const Card = (props) => {
           src={review.image}
           alt=""
         />
-        <div className="w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-1] left-[10px]"></div>
+        <div
+          className="w-[140px] h-[140px] bg-violet-500 rounded-full 
+           absolute top-[-6px] z-[-1] left-[10px]"
+        ></div>
       </div>
 
       <div className="text-center mt-7">
