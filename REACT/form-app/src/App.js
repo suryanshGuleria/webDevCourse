@@ -11,7 +11,7 @@ function App() {
     mode: "",
     favCar: "",
   });
-  console.log(data);
+  // console.log(data);
   function changeHandler(e) {
     const { name, value, checked, type } = e.target;
     setData((prevData) => {
@@ -21,10 +21,14 @@ function App() {
       };
     });
   }
+  function submitHandler(e) {
+    e.preventDefault();
+    console.log(data);
+  }
 
   return (
     <div>
-      <form>
+      <form onSubmit={submitHandler}>
         <input
           type="text"
           name="firstName"
@@ -109,6 +113,8 @@ function App() {
             <option value="brezza">brezza</option>
           </select>
         </label>
+        <br /> <br />
+        <button>Submit</button>
       </form>
     </div>
   );
