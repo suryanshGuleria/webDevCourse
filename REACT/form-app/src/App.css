@@ -1,0 +1,39 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+   width: 60%;
+   border: 2px solid lightgray;
+   border-radius: 5px;
+   padding: 20px;
+}
+
+input.textfield{
+    height: 25px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+input[type="radio"]{
+   width: 3%;
+}
+
+select{
+    height: 25px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* .notification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+} */
+
+.checkboxes>label{
+    margin-left: 5px;
+}

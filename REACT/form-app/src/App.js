@@ -6,10 +6,11 @@ function App() {
     firstName: "",
     lastName: "",
     email: "",
-    comments: "",
-    isVisible: true,
-    mode: "",
-    favCar: "",
+    country: "india",
+    notificationFor: "",
+    comments: false,
+    candidates: false,
+    offers: false,
   });
   // console.log(data);
   function changeHandler(e) {
@@ -27,95 +28,140 @@ function App() {
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <input
-          type="text"
-          name="firstName"
-          placeholder="first name"
-          onChange={changeHandler}
-          value={data.firstName}
-        />
-        <br /> <br />
-        <input
-          type="text"
-          name="lastName"
-          placeholder="last name"
-          onChange={changeHandler}
-          value={data.lastName}
-        />
-        <br /> <br />
-        <input
-          type="email"
-          name="email"
-          placeholder="email"
-          onChange={changeHandler}
-          value={data.email}
-        />
-        <br />
-        <br />
-        <textarea
-          name="comments"
-          cols="30"
-          rows="10"
-          onChange={changeHandler}
-          value={data.comments}
-        ></textarea>
-        <br /> <br />
-        <label htmlFor="isVisible">is visible:</label>
-        <input
-          type="checkbox"
-          onChange={changeHandler}
-          name="isVisible"
-          checked={data.isVisible}
-          id="isVisible"
-        />
-        <br />
-        <br />
-        <fieldset>
-          <legend>Mode:</legend>
-          <label htmlFor="Online-Mode">
+    <div className="container">
+      <div className="wrapper">
+        <form onSubmit={submitHandler}>
+          <label htmlFor="firstName">
+            First name
+            <br />
+            <input
+              type="text"
+              className="textfield"
+              name="firstName"
+              id="firstName"
+              placeholder="first name"
+              onChange={changeHandler}
+              value={data.firstName}
+            />
+          </label>
+          <br /> <br />
+          <label htmlFor="lastName">
+            Last name
+            <br />
+            <input
+              type="text"
+              className="textfield"
+              name="lastName"
+              id="lastName"
+              placeholder="last name"
+              onChange={changeHandler}
+              value={data.lastName}
+            />
+          </label>
+          <br /> <br />
+          <label htmlFor="email">
+            Email
+            <br />
+            <input
+              type="email"
+              className="textfield"
+              name="email"
+              id="email"
+              placeholder="email"
+              onChange={changeHandler}
+              value={data.email}
+            />
+          </label>
+          <br />
+          <br />
+          <label htmlFor="country">
+            Country
+            <br />
+            <select
+              name="country"
+              className="textfield"
+              id="country"
+              onChange={changeHandler}
+              value={data.country}
+            >
+              <option value="india">India</option>
+              <option value="nepal">Nepal</option>
+              <option value="usa">USA</option>
+            </select>
+          </label>
+          <br /> <br />
+          {/* handling checkbox */}
+          <div className="checkboxes">
+            <h2>By Email</h2>
+            <input
+              type="checkbox"
+              name="comments"
+              checked={data.comments}
+              id="comments"
+              onChange={changeHandler}
+            />
+            <label htmlFor="comments">Comments</label>
+
+            <br />
+            <input
+              type="checkbox"
+              name="candidates"
+              checked={data.candidates}
+              id="candidates"
+              onChange={changeHandler}
+            />
+            <label htmlFor="candidates">Candidates</label>
+
+            <br />
+            <input
+              type="checkbox"
+              name="offers"
+              checked={data.offers}
+              id="offers"
+              onChange={changeHandler}
+            />
+            <label htmlFor="offers">Offers</label>
+          </div>
+          <br />
+          <br />
+          {/* handling radio buttons */}
+          <div className="notification">
+            <h2>Push Notifications</h2>
+            <p>These are delivered via sms</p>
+            <label htmlFor="everything">everything</label>
             <input
               type="radio"
-              name="mode"
+              name="notificationFor"
               onChange={changeHandler}
-              value="Online-Mode"
-              id="Online-Mode"
-              checked={data.mode === "Online-Mode"}
+              value="everything"
+              id="everything"
+              checked={data.notificationFor === "everything"}
             />
-            Online-Mode
-          </label>
-          <label htmlFor="Offline-Mode">
+            <br />
+            <label htmlFor="same-as-email">Same as email</label>
             <input
               type="radio"
-              name="mode"
+              name="notificationFor"
               onChange={changeHandler}
-              value="Offline-Mode"
-              id="Offline-Mode"
-              checked={data.mode === "Offline-Mode"}
+              value="same-as-email"
+              id="same-as-email"
+              checked={data.notificationFor === "same-as-email"}
             />
-            Offline-Mode
-          </label>
-        </fieldset>
-        <br /> <br />
-        <label htmlFor="favCar">
-          Pick your fav car{` `}
-          <select
-            name="favCar"
-            id="favCar"
-            onChange={changeHandler}
-            value={data.favCar}
-          >
-            <option value="">-</option>
-            <option value="mustang">mustang</option>
-            <option value="safari">safari</option>
-            <option value="scorpio">scorpio</option>
-            <option value="brezza">brezza</option>
-          </select>
-        </label>
-        <br /> <br />
-        <button>Submit</button>
-      </form>
+            <br />
+            <label htmlFor="no-notification">No push notification</label>
+            <input
+              type="radio"
+              name="notificationFor"
+              onChange={changeHandler}
+              value="no-notification"
+              id="no-notification"
+              checked={data.notificationFor === "no-notification"}
+            />
+          </div>
+          <br /> <br />
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
